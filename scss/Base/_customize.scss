@@ -1,0 +1,56 @@
+.card{
+    border: none;
+    .card-body{
+      padding: 1.25rem 0;
+    }
+}
+
+.owl-theme{
+    .owl-dots{
+
+        .owl-dot{
+          span{
+            border:1px solid $color-blue-1;
+            background:  $color-blue-1;
+            width: 8px;
+            height: 8px;
+            transition: .3s;
+          }
+          &:hover{
+              span{
+                background:  $color-blue-1;
+                transform: scale(1.3);
+              }
+          }
+        }
+        .owl-dot.active{
+            span{
+                border:1px solid $color-blue-1;
+                background: $color-white-0;
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+}
+
+.modal{
+  .modal-body{
+    .modal__video{
+      position: relative;
+      button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        font-size: $fs-4;
+        color: $color-white-0;
+        border: 2px solid transparent;
+        &:hover{
+          border: 2px solid $color-blue-1;
+        }
+      }
+    }
+  }
+}

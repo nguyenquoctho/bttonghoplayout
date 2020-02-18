@@ -1,0 +1,49 @@
+.disclosures{
+    width: 100%;
+    @include styleText($fs-0 -2,$fw-normal,$color-black-1);
+    .mainBtn-white{
+       width: 98%;
+       margin-left: 1%;
+       text-align: center;
+    //    @include styleText($fs-2,$fw-normal,$color-blue-4);
+    //    background: none;
+    // &:active{
+    //   i{
+    //        transform: rotateX(180deg);
+         
+    //    }
+    // }
+      
+
+    }
+    .disclosure__content{
+        // height: 300px;
+        background: $color-white-cream;
+        width: 100%;
+            li{
+              list-style: none;
+                @include styleText($fs-0 - 2,$fw-normal,$color-black-1);
+            }
+      
+    }
+    .showMore {
+        display: block;
+        cursor: pointer;
+      }
+      .showMore + input {
+       display:none;
+      }
+      .showMore + input + * {
+       
+        max-height: 0;
+        /*and eventually delay an overflow:auto; */
+        overflow:hidden;
+        transition: max-height 0.5s, overflow 0s;
+      }
+      .showMore + input:checked + * { 
+        /* here comes the compromise, set a max-height that would for your usual contents*/
+         max-height: 300px;
+        overflow:auto;
+        transition: max-height 0.5s, overflow 0.5s 0.5s;
+      }
+}

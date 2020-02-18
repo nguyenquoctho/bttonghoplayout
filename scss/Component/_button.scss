@@ -1,0 +1,87 @@
+.mainBtn{
+    border-radius: 0;
+        @include styleButton($color-blue-5, $color-blue-5,$pd-2,auto);
+        @include styleText($fs-0 + 1,$fw-normal,$color-white-0);
+       &:hover{
+        @include hoverButton($color-white-0, $color-blue-2, $color-blue-2);
+       }
+}
+
+.mainBtn-Red{
+    border-radius: 0;
+    
+        @include styleButton($color-red-0, $color-red-0,$pd-2,auto);
+        @include styleText($fs-0 + 1,$fw-normal,$color-white-0);
+       &:hover{
+        @include hoverButton($color-white-0,$color-red-0, $color-red-0);
+       }
+}
+
+.mainBtn-white{
+    border-radius: 0;
+    
+        @include styleButton($color-white-0,$color-white-0,$pd-2,auto);
+        @include styleText($fs-0 + 1,$fw-normal,$color-blue-2);
+       &:hover{
+        @include hoverButton($color-white-0,$color-blue-2,$color-blue-2);
+       }
+}
+
+/* back to */
+ .backtotop{
+    font-size: 1.5rem;
+    
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .movetoPickup{
+    font-size: 1.5rem;
+    
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateY(-50%);
+  }
+  
+.movetoPickup a i,  .backtotop a i{
+    width: 40px;
+    height: 40px;
+    color: #021d97;
+    font-size: 2.5rem;
+    border: 1px solid #021d97;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+  }
+
+.backtotop .cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+ .backtotop a{
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+@keyframes animate{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+.hide{
+  transform: translateX(-500px);
+}
+
+.backtotop.animate{
+ right: -50px;
+}
+
+.backtotop.sticky{
+  right: 30px;
+}

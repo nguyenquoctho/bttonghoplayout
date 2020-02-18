@@ -1,0 +1,103 @@
+.news{
+    width: 100%;
+    @include styleText($fs-0,$fw-normal,$color-white-0);
+    .news__content{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        .news__item{
+            position: relative;
+            cursor: pointer;
+            
+            .new__item__detail{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background: rgba(6,120,188,0.5);
+                p{
+                    font-size: $fs-0 - 1;
+                   
+                    width: 90%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span{
+                        width: 70%;
+                    }
+                }
+                i{
+                    font-size: $fs-2;
+                    @include iconborder($heigh-width-icon-3);
+                    border: 2px solid $color-white-0;
+                    &:hover{
+                        background: $color-white-0;
+                        color: rgba(6,120,188,0.5);
+                    }
+                }
+               
+            }
+            img{
+                width: 100%;
+                transition: .5s;
+            }
+            overflow: hidden;
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .news__item1{
+            grid-column: 1/4;
+            height: 100%;
+            cursor: auto;
+            .new__item1__detail{
+                width: 70%;
+                position: absolute;
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                color: $color-black-0;
+                h3{
+                   font-size: 2rem;
+                }
+                p{
+                    @include styleText($fs-0 +1,$fw-bold,$color-gray-4);
+                }
+            }
+
+        }
+        .news__item3{
+            grid-column: 1/3;
+            grid-row: 2/4;
+            .new__item__detail{
+                p{
+                    font-size: $fs-3;
+                }
+                i{
+                    font-size: $fs-3 + 10;
+                    @include iconborder($heigh-width-icon-4);
+                    border: 2px solid $color-white-0;
+                    
+                }
+            }
+        }
+    }
+    @include respond-to('medium'){
+        .news__content{
+            display: block;
+            .news__item1{
+                height: 100px;
+                .new__item1__detail{
+                    p{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+}

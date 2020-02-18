@@ -1,0 +1,16 @@
+.airBag{
+    width: 100%;
+    @include styleText($fs-0,$fw-normal,$color-black-0);
+    .airBagRecall{
+        background: $color-gray-3;
+        text-align: center;
+        a{
+            width: 250px;
+            margin: 0 auto;
+        }
+        h2{
+            @include styleText($fs-4 + 2,$fw-normal,$color-red-0);
+        }
+        
+    }
+}

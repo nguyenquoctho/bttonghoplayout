@@ -1,0 +1,48 @@
+.pickUp{
+    text-align: center;
+    h2{
+        @include styleText($fs-4 + 2,$fw-normal,$color-black-0);
+    }
+    .overview{
+        width: 90%;
+        margin: 0 auto;
+        .overview-item{
+            justify-content: center;
+            align-self: center;
+            .card{
+                .card-body{
+                    .card-title{
+                        @include styleText($fs-2,$fw-normal,$color-blue-4);
+                        cursor: pointer;
+                        span{
+                            @include styleText($fs-2,$fw-bold,$color-blue-5);
+                        }
+                    }
+                   .overviewLink{
+                        @include styleText($fs-0 + 2,$fw-normal,$color-blue-4);
+                        line-height: 5rem;
+                        text-decoration: none;
+                        align-items: center;
+                        justify-content: center;
+                        i{
+                            font-size: $fs-2;
+                        }
+                        &:hover{
+                            color:  $color-blue-0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include respond-to('large'){
+        h2{
+            font-size: $fs-4 - 4;
+        }
+    }
+    @include respond-to('medium'){
+        h2{
+            font-size: $fs-4 - 10;
+        }
+    }
+}

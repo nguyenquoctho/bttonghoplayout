@@ -1,0 +1,62 @@
+.deal{
+    width: 100%;
+    @include styleText($fs-0,$fw-normal,$color-white-0);
+    h2{
+        font-size: $fs-4 + 5;
+    }
+    .deal__top{
+        background-image: url('https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/marketing/sweeten-the-deal/incentives_ecosport.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg');
+        @include styleBgImg();
+        width: 100%;
+        height: 220px;
+        position: relative;
+        .deal__link{
+            position: absolute;
+            text-decoration: none;
+            top: 15%;
+            left: 7%;
+            width: 85%;
+            height: 70%;
+            border: 2px solid transparent;
+            @include styleText($fs-0,$fw-normal,$color-white-0);
+           
+            p{
+                align-items: center;
+                justify-content: center;
+                font-size: $fs-0 + 3;
+                i{
+                    font-size: $fs-2;
+                }
+            }
+            &:focus{
+                border: 2px solid $color-blue-4;
+            }
+        }
+       
+    }
+    .deal__bottom{
+        background-image: url('https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/campaigns/2020/SNS/19_FRD_EPR_400040_ST_2160x945-1.jpg/_jcr_content/renditions/cq5dam.web.2160.2160.jpeg');
+        @include styleBgImg();
+        width: 100%;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+        .deal__content{
+            width: 300px;
+            .mainBtn{
+                width: 85%;
+                margin: 0 auto;
+            }
+        }
+    }
+    @include respond-to('medium'){
+        .deal__top{
+            background-image: url('https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/marketing/sweeten-the-deal/mobile/incentives_ecosport.jpg/_jcr_content/renditions/cq5dam.web.768.768.jpeg');
+            height: 400px;
+        }
+        h2{
+            font-size: $fs-4 - 10;
+        }
+        
+    }
+}
